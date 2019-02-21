@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getTheCards } from './actions/actions'
+import { getTheCards, filterTheCards } from './actions/actions'
 import Navbar from './components/Navbar'
 import Cards from './components/Cards'
 
@@ -23,13 +23,14 @@ class App extends Component {
     this.props.getTheCards(name)
   }
 
-  // filterPokemon = name => {
-  //   this.props.getCards(name)
-  // }
+  filterPokemon = name => {
+    this.props.filterTheCards(name)
+  }
+
   render() {
     return (
       <div className="App">
-          <Navbar handleSearch={this.handleSearch} filteredSearch={this.handleFilteredSearch} />
+          <Navbar handleSearch={this.searchPokemon} filterPokemon={this.filterPokemon} />
           <Cards loading={this.props.loading} cards={this.props.cards} />           
       </div>
     );
@@ -42,7 +43,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-      getTheCards: name => dispatch(getTheCards(name))
+      getTheCards: name => dispatch(getTheCards(name)),
+      filterTheCards: type => dispatch(filterTheCards(type))
     }
 }
 

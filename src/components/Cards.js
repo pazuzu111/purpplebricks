@@ -6,7 +6,7 @@ const Cards = props =>  (
     <div>
         <div className="card-container">
           {
-            props.loading === false? (
+            props.loading === false || undefined? (
                 props.cards.cards.map(card => {
                   return (
                     <div className="card" key={card.id}>
@@ -17,7 +17,7 @@ const Cards = props =>  (
             ) 
             : 
             (
-              console.log(props)
+              console.log('no')
             )
           }
         </div>

@@ -10,12 +10,12 @@ const Navbar = props => {
                 <img src={pokemon} className="App-logo" alt="logo" />
             
             <div className="filter-wrapper">
-                <div onClick={props.filteredSearch} className="subtype-filter">
+                <div onClick={() => props.filterPokemon('legend')} className="subtype-filter">
                     <img src={legend} alt="break" />
                     <p> LEGEND </p>
                 </div>
                 
-                <div onClick={props.filteredSearch} className="subtype-filter">
+                <div onClick={() => props.filterPokemon('mega')} className="subtype-filter">
                     <img src={mega} alt="mega" />
                     <p> MEGA </p>
                 </div>
