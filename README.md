@@ -5,10 +5,10 @@ purple bricks app
 - redux
 
 #get it up & running
-git clone
-npm i
-cd into src
-npm start
+- git clone
+- npm i
+- cd into src
+- npm start
 
 #code decisions
 - Most of all I wanted to have fun so i picked   a fun API
