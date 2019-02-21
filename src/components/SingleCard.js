@@ -83,7 +83,7 @@ const SingleCard = props => {
         </div>
         
         <Link to={{ pathname: `/`}} >
-          <img src={pokemon} alt="pokemon"/>
+          <img id="back" src={pokemon} alt="pokemon"/>
         </Link>
       </div>
     )

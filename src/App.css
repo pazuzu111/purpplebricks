@@ -26,6 +26,10 @@ body {
   align-items: center;
 }
 
+#back {
+  height: 35vw;
+}
+
 #search {
   border-radius: 9px;
   border: none;
@@ -159,11 +163,19 @@ form {
   .card button {
     width: 54%;
   }
+
+  #back {
+    height: 35vw;
+  }
 }
 
 @media (max-width: 700px) {
   form, form input {
     width: 100% !important;
+  }
+
+  #back {
+    height: 50vw;
   }
 }
 
@@ -182,5 +194,9 @@ form {
   .App-header {
     flex-direction: column;
     height: 100%;
+  }
+
+  #back {
+    height: 35vw;
   }
 }
