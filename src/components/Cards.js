@@ -6,8 +6,8 @@ const Cards = props =>  (
     <div>
         <div className="card-container">
           {
-            props.loading === false || undefined ? (
-                props.cards.cards.map((card) => {
+            props.loading === false? (
+                props.cards.cards.map(card => {
                   return (
                     <div className="card" key={card.id}>
                       <Card card={card} />
@@ -22,6 +22,6 @@ const Cards = props =>  (
           }
         </div>
     </div>
-    )
+)
 
 export default Cards;

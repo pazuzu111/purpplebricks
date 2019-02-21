@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import logo from '../logo.svg';
+import legend from '../legend.png';
+import mega from '../mega.png';
+import pokemon from '../pokemon.png';
+
 
 const Navbar = props => {
-   
     return (
         <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={pokemon} className="App-logo" alt="logo" />
             
             <div className="filter-wrapper">
                 <div onClick={props.filteredSearch} className="subtype-filter">
-                    <img src={logo} alt="break" />
-                    <p>LEGEND</p>
+                    <img src={legend} alt="break" />
+                    <p> LEGEND </p>
                 </div>
                 
                 <div onClick={props.filteredSearch} className="subtype-filter">
-                    <img src={logo} alt="mega" />
-                    <p>MEGA</p>
+                    <img src={mega} alt="mega" />
+                    <p> MEGA </p>
                 </div>
             </div>
             
