@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import legend from '../legend.png';
 import mega from '../mega.png';
 import pokemon from '../pokemon.png';
@@ -14,7 +15,9 @@ const Navbar = props => {
 
     return (
         <header className="App-header">
-                <img src={pokemon} className="App-logo" alt="logo" />
+            <Link to="/">
+                <img id="back" src={pokemon} alt="pokemon" style={{height: '10vh'}} />
+            </Link>            
             
             <div className="filter-wrapper">
                 <div onClick={() => props.filterPokemon('legend')} className="subtype-filter">

@@ -6,7 +6,8 @@ const Cards = props =>  (
     <div>
         <div className="card-container">
           {
-            props.loading === false || undefined? (
+            props.loading === false || undefined? 
+            (
                 props.cards.cards.map(card => {
                   return (
                     <div className="card" key={card.id}>
@@ -17,7 +18,9 @@ const Cards = props =>  (
             ) 
             : 
             (
-              console.log('no')
+                <div className="loader">
+                    <img src={loader} alt="loader"/>
+                </div>
             )
           }
         </div>
