@@ -98,3 +98,25 @@ body {
   background: white;
   border-radius: 12px;
 }
+
+.selected-wrapper {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.img-wrapper {
+  height: 400px;
+  margin: 10px;
+}
+
+.info-wrapper {
+  margin: 10px;
+  color: #fff;
+  padding: 20px 75px;
+}
+
+.img-wrapper img {
+  height: 100%;
+}

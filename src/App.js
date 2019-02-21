@@ -29,10 +29,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
           <Navbar handleSearch={this.handleSearch} filteredSearch={this.handleFilteredSearch} />
           <Cards loading={this.props.loading} cards={this.props.cards} />           
-        </header>
       </div>
     );
   }
