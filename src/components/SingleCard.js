@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuid from 'uuid';
 import { connect } from 'react-redux';
 
 
@@ -13,18 +14,18 @@ const SingleCard = props => {
 
     if(props.location.state.data.hasOwnProperty('attacks')) 
     {
-      attacks = props.location.state.data.attacks.map((attack, index) => {
+      attacks = props.location.state.data.attacks.map(attack => {
                   return (
-                    <li key={index}>{ attack.name }</li>
+                    <li key={uuid()}>{ attack.name }</li>
                   )
                 });
     }
 
     if(props.location.state.data.hasOwnProperty('weaknesses')) 
     {
-      weaknesses = props.location.state.data.weaknesses.map((weakness, index) => {
+      weaknesses = props.location.state.data.weaknesses.map(weakness => {
                       return (
-                        <li key={index}>{ weakness.type }</li>
+                        <li key={uuid()}>{ weakness.type }</li>
                       )
                   });
     }
