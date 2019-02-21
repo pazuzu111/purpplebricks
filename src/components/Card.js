@@ -1,13 +1,12 @@
-
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import loader from '../loader.gif';
 
 const Card = props =>  {
     return (
-        <div className="card">
-            <img src={props.card.imageUrl} alt="pokemon"/>
-        </div>
+        <Link to={{ pathname: `/${props.card.id}`, state: { data: props.card }}} >
+          <img src={props.card.imageUrl} alt="pokemon"/>
+        </Link>
     )
 }
   

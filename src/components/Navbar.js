@@ -5,9 +5,9 @@ import pokemon from '../pokemon.png';
 
 
 const Navbar = props => {
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         e.preventDefault();
-        const search = e.target.search.value;    
+        let search = e.target.search.value;    
         props.handleSearch(search);
         e.target.search.value = '';
       }
