@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { connect } from 'react-redux';
 import { getTheCards } from './actions/actions'
+import Navbar from './components/Navbar'
 import './App.css';
 import { dispatch } from 'rxjs/internal/observable/range';
 
@@ -11,8 +11,19 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.props.getTheCards('')
   }
+
+  // handleSubmit = () => {
+
+  // }
+
+  searchPokemon = name => {
+    this.props.getTheCards(name)
+  }
+
+  // filterPokemon = name => {
+  //   this.props.getCards(name)
+  // }
   render() {
     return (
       <div className="App">
@@ -22,8 +33,9 @@ class App extends Component {
           }
       </pre>
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {this.props.cards.cards? this.props.cards.cards.map(x => console.log(x)) : 'nothing'}
+          <Navbar handleSearch={this.handleSearch} filteredSearch={this.handleFilteredSearch} />
+
+          {/* {this.props.cards.cards? this.props.cards.cards.map(x => console.log(x)) : 'nothing'} */}
            
         </header>
       </div>
