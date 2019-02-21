@@ -19,15 +19,31 @@ body {
   background: linear-gradient(to right, #ffa751, #ffe259); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 63px;
   padding: 20px;
+  padding-right: 41px;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+#search {
+  border-radius: 9px;
+  border: none;
+  height: 35px;
+  width: 295px;
+  font-size: 18px;
+  padding: 15px 15px;
+  outline: none;
+}
+
+form {
+  margin-left: 33px;
+}
+
 .filter-wrapper {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .App-header input {
@@ -79,15 +95,20 @@ body {
 }
 
 .card {
-  height: 300px;
+  height: 400px;
   margin: 30px 10px;
   position: relative;
   transition: all .3s ease-in-out;
 }
 
+.card:hover {
+  transform: scale(1.1);
+  transition: all .3s ease-in-out;
+}
+
 .card img {
   height: 100%;
-  transition: .5s all ease-out
+  transition: .3s all ease-out
 }
 
 .card h2 {
@@ -119,4 +140,47 @@ body {
 
 .img-wrapper img {
   height: 100%;
+}
+
+
+@media (max-width: 520px) {
+  .App-header input {
+    width: 80%;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    height: 350px;
+  }
+
+  .card button {
+    width: 54%;
+  }
+}
+
+@media (max-width: 700px) {
+  form, form input {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1061px) {
+  .filter-wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+    justify-content: space-evenly;
+  }
+
+  .subtype-filter img {
+    height: 20px !important;
+  }
+
+  .App-header {
+    flex-direction: column;
+    height: 100%;
+  }
 }

@@ -15,8 +15,6 @@ class App extends Component {
     this.searchPokemon('')
   }
 
-  // handleSubmit = name => { this.searchPokemon(name) }
-
   searchPokemon = name => { this.props.getTheCards(name) }
 
   filterPokemon = name => { this.props.filterTheCards(name) }

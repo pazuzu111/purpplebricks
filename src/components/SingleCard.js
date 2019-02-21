@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import pokemon from '../pokemon.png';
 
 
 const SingleCard = props => {
@@ -79,6 +81,10 @@ const SingleCard = props => {
             ) : ''
           }
         </div>
+        
+        <Link to={{ pathname: `/`}} >
+          <img src={pokemon} alt="pokemon"/>
+        </Link>
       </div>
     )
 };

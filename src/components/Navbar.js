@@ -30,6 +30,7 @@ const Navbar = props => {
             
             <form onSubmit={e => handleSubmit(e)}>
                 <input 
+                    id="search"
                     className="typeahead"
                     type="search"
                     autoComplete="off" 
