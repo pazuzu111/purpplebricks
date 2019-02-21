@@ -15,17 +15,11 @@ class App extends Component {
     this.searchPokemon('')
   }
 
-  // handleSubmit = () => {
+  // handleSubmit = name => { this.searchPokemon(name) }
 
-  // }
+  searchPokemon = name => { this.props.getTheCards(name) }
 
-  searchPokemon = name => {
-    this.props.getTheCards(name)
-  }
-
-  filterPokemon = name => {
-    this.props.filterTheCards(name)
-  }
+  filterPokemon = name => { this.props.filterTheCards(name) }
 
   render() {
     return (

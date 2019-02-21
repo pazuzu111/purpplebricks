@@ -5,6 +5,13 @@ import pokemon from '../pokemon.png';
 
 
 const Navbar = props => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const search = e.target.search.value;    
+        props.handleSearch(search);
+        e.target.search.value = '';
+      }
+
     return (
         <header className="App-header">
                 <img src={pokemon} className="App-logo" alt="logo" />
@@ -21,7 +28,7 @@ const Navbar = props => {
                 </div>
             </div>
             
-            <form onSubmit={props.handleSubmit}>
+            <form onSubmit={e => handleSubmit(e)}>
                 <input 
                     className="typeahead"
                     type="search"
