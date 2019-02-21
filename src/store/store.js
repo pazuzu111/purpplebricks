@@ -4,6 +4,5 @@ import reducers from '../reducers/reducers'
 
 
 //create redux store
-export default function configureStore() {
-    return createStore(reducers, applyMiddleware(thunk))
-}
+export const store = createStore( reducers, applyMiddleware(thunk))
+

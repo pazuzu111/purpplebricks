@@ -1,3 +1,4 @@
+import {fetchData} from '../services/fetchService'
 
 export const GET_CARDS = 'GET_CARDS'
 export const getCards = (name) => dispatch => {
@@ -14,5 +15,11 @@ export const receiveCards = (name, data) => dispatch => {
         name,
         cards: data
     })
+}
+
+//action creator
+export const getTheCards = (name) => dispatch => {
+    dispatch(getCards(name))
+    fetchData(name).then(cards => dispatch(receiveCards(name, cards)))
 }
 
