@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import loader from '../loader.gif';
 
 const Card = props =>  {
     return (
