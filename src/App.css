@@ -5,6 +5,9 @@ background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, F
 font-family: 'Quicksand';
 }
 
+html {
+  background: black;
+}
 .App {
   text-align: center;
 }
