@@ -33,6 +33,11 @@ font-family: 'Quicksand';
   z-index: 99;
 }
 
+#back2 {
+  height: 35vw;
+  cursor: pointer;
+}
+
 #search {
   border-radius: 6px;
   border: none;
