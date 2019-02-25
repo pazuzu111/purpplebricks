@@ -80,10 +80,12 @@ form {
 }
 
 .subtype-filter {
-  padding: 20px;
+  padding: 15px;
   color: grey;
   cursor: pointer;
   transition: all .2s ease-in-out;
+  width: 65px;
+
 }
 
 .subtype-filter img {
