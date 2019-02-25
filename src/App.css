@@ -28,6 +28,7 @@ height: 63px;
 
 #back {
   height: 35vw;
+  cursor: none;
 }
 
 #search {
@@ -106,7 +107,7 @@ form {
 }
 
 .card {
-  height: 400px;
+  height: 350px;
   margin: 30px 10px;
   position: relative;
   transition: all .3s ease-in-out;
