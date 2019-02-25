@@ -15,9 +15,7 @@ const Navbar = props => {
 
     return (
         <header className="App-header">
-            <Link to="/">
-                <img id="back" src={pokemon} alt="pokemon" style={{height: '10vh'}} />
-            </Link>            
+            <img id="back" src={pokemon} alt="pokemon" style={{height: '10vh'}} onClick={() => props.handleSearch('')} />
             
             <div className="filter-wrapper">
                 <div onClick={() => props.filterPokemon('legend')} className="subtype-filter">

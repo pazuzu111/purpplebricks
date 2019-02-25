@@ -15,9 +15,9 @@ font-family: 'Quicksand';
 
 .App-header {
   background: #ED213A;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-height: 63px;
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 43px;
   padding: 20px;
   padding-right: 41px;
   color: white;
@@ -28,18 +28,19 @@ height: 63px;
 
 #back {
   height: 35vw;
-  cursor: none;
+  cursor: pointer;
 }
 
 #search {
-  border-radius: 9px;
+  border-radius: 6px;
   border: none;
-  height: 35px;
-  width: 295px;
-  font-size: 18px;
-  padding: 15px 15px;
+  height: 15px;
+  width: 210px;
+  font-size: 13px;
+  padding: 15px 7px;
   outline: none;
-  transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s;
 }
 
 #search:focus {
@@ -92,7 +93,10 @@ form {
   color: white;
 }
 
-
+.subtype-filter:hover {
+  background: gold;
+  transition: all .2s ease-in-out;
+}
 .loader {
   width: 80%;
   margin-top: 40px;
@@ -107,7 +111,7 @@ form {
 }
 
 .card {
-  height: 350px;
+  height: 250px;
   margin: 30px 10px;
   position: relative;
   transition: all .3s ease-in-out;
@@ -187,7 +191,7 @@ form {
   }
 }
 
-@media (max-width: 1061px) {
+@media (max-width: 861px) {
   .filter-wrapper {
     height: 100%;
     width: 100%;
@@ -196,7 +200,7 @@ form {
   }
 
   .subtype-filter img {
-    height: 20px !important;
+    height: 30px !important;
   }
 
   .App-header {
