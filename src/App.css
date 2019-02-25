@@ -176,6 +176,10 @@ form {
     width: 80%;
   }
 
+  .subtype-filter {
+    margin-top: 20%;
+  }
+
   .card-container {
     flex-direction: column;
   }
