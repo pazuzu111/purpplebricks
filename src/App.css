@@ -29,6 +29,8 @@ font-family: 'Quicksand';
 #back {
   height: 35vw;
   cursor: pointer;
+  position: fixed;
+  z-index: 99;
 }
 
 #search {
