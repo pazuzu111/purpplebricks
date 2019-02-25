@@ -19,7 +19,7 @@ purple bricks app
 
 #things to do if i had more time
 - convert to typescript 
-- more unit tests
+- more unit tests/ separate tests
 - pagination
 - dependency injection
 - add containerization(Docker)
